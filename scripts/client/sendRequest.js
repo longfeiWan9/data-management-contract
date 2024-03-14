@@ -29,7 +29,7 @@ async function main() {
 }
 
 function cidToBytes(cid){
-    const cidHexRaw = new CID(cid).toString('base16').substring(1)
+    const cidHexRaw = new CID(cid).toV1().toString('base16').substring(1)
     const cidHex = "0x00" + cidHexRaw
     return cidHex;
 }
